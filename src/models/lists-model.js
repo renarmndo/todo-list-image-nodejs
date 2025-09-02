@@ -17,6 +17,14 @@ List.init(
         key: "id",
       },
     },
+    templateId: {
+      // 🔑 tambahin ini
+      type: DataTypes.INTEGER,
+      references: {
+        model: "templates",
+        key: "id",
+      },
+    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,

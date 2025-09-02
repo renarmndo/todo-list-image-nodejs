@@ -3,7 +3,7 @@ import sequelize from "../config/config.js";
 
 class Template extends Model {}
 
-Template.ini(
+Template.init(
   {
     id: {
       type: DataTypes.INTEGER,

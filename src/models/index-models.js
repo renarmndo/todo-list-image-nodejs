@@ -9,5 +9,10 @@ User.hasMany(List, { foreignKey: "userId", as: "todos" });
 List.belongsTo(User, { foreignKey: "userId", as: "user" });
 
 // User.hasMany(Template, { foreignKey: "userId" });
+Template.hasMany(List, { foreignKey: "templateId", as: "lists" });
+List.belongsTo(Template, { foreignKey: "templateId", as: "template" });
 
-export { User, List };
+User.hasMany(Template, { foreignKey: "createdBy", as: "createdTemplates" });
+Template.belongsTo(User, { foreignKey: "createdBy", as: "creator" });
+
+export { User, List, Template };
