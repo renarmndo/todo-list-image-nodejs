@@ -2,7 +2,7 @@ import web from "./src/app/web.js";
 import sequelize from "./src/config/config.js";
 import { User, List, Template } from "./src/models/index-models.js";
 
-const port = 5000;
+const port = process.env.DB_PORT;
 
 web.get("/", async (req, res) => {
   try {
