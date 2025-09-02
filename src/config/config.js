@@ -16,9 +16,9 @@ dotenv.config();
 
 const { DB_NAME, DB, USER, DB_PASS, DB_URL } = process.env;
 const sequelize = new Sequelize(DB_URL, {
-  host: process.env.DB_HOST,
-  dialect: "mysql",
-  logging: false,
+  define: {
+    timestamps: true,
+  },
 });
 
 export default sequelize;
